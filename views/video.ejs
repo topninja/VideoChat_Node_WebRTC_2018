@@ -1,0 +1,78 @@
+<html>
+
+<head>
+  <title>Theelandating</title>
+  <link rel="icon" href="../img/worldmap.jpg">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/menu.css">
+  <style>
+      video {
+          position: relative;
+          width: 80%;
+      }
+  </style>
+</head>
+
+<body style="background-color: rgb(248, 222, 187);">
+  <div class="row" style="padding-top: 5%; padding-bottom: 2%;">
+    <div class="col-5">
+      <h1>Video Chat Page            <i style="font-size: 20px"><a href="/text">Go to text!</a></i></h1>
+    </div>
+    <div class="col-1"> </div>
+    <div class="col-2"> </div>
+    <div class="col-2">
+      Location: <select>
+        <!-- <option value="">Location</option> -->
+        <option value="US">United States</option>
+        <option value="IT">Italy</option>
+        <option value="UK">United Kingdom</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="col-2" id="google_translate_element"></div>
+  </div>
+  </div>
+  <div class="row">
+      <div class="col-6">
+        <!--<p>You:</p>-->
+        <video id="localVideo" autoplay playsinline width="500px" style="border: 1px solid black;"></video>
+      </div>
+      <div class="col-6">
+            <!--<p>Stranger:</p>-->
+            <video id="remoteVideo" autoplay playsinline width="500px" style="border: 1px solid black;"></video>
+      </div>
+  </div>
+
+   <div class="row" style="padding-top: 10%">
+    <div class="col-5">
+    </div>
+    <div class="col-2">
+        <i style="font-size: 20px"><a href="/">Go to Home</a></i>
+    </div>
+    <div class="col-2">
+    </div>
+  </div> 
+
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="../scripts/video-page.js"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+  <script src="../js/menu.js"></script>
+</body>
+</html>
